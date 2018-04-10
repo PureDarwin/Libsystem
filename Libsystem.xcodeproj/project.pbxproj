@@ -287,7 +287,6 @@
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME).B";
 				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
 			};
 			name = Release;
 		};

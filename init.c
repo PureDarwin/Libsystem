@@ -47,11 +47,7 @@ extern void __malloc_init(const char *apple[]); // from libsystem_malloc.dylib
 extern void __keymgr_initializer(void);		// from libkeymgr.dylib
 extern void _dyld_initializer(void);		// from libdyld.dylib
 extern void libdispatch_init(void);		// from libdispatch.dylib
-extern void _libxpc_initializer(void);		// from libxpc.dylib
-extern void _libsecinit_initializer(void);        // from libsecinit.dylib
-extern void _libtrace_init(void);		// from libsystem_trace.dylib
-extern void _container_init(const char *apple[]); // from libsystem_containermanager.dylib
-extern void __libdarwin_init(void);		// from libsystem_darwin.dylib
+//extern void __libdarwin_init(void);		// from libsystem_darwin.dylib
 
 
 // signal malloc stack logging that initialisation has finished
@@ -73,8 +69,6 @@ extern void dispatch_atfork_prepare(void);
 extern void dispatch_atfork_parent(void);
 extern void dispatch_atfork_child(void);
 
-extern void _libtrace_fork_child(void);
-
 extern void _malloc_fork_prepare(void);
 extern void _malloc_fork_parent(void);
 extern void _malloc_fork_child(void);
@@ -82,12 +76,9 @@ extern void _malloc_fork_child(void);
 extern void _mach_fork_child(void);
 extern void _notify_fork_child(void);
 extern void _dyld_fork_child(void);
-extern void xpc_atfork_prepare(void);
-extern void xpc_atfork_parent(void);
-extern void xpc_atfork_child(void);
-extern void _libSC_info_fork_prepare(void);
-extern void _libSC_info_fork_parent(void);
-extern void _libSC_info_fork_child(void);
+//extern void _libSC_info_fork_prepare(void);
+//extern void _libSC_info_fork_parent(void);
+//extern void _libSC_info_fork_child(void);
 extern void _asl_fork_child(void);
 
 #if defined(HAVE_SYSTEM_CORESERVICES)
@@ -164,20 +155,12 @@ libSystem_initializer(int argc,
 	_dyld_initializer();
 
 	libdispatch_init();
-	_libxpc_initializer();
-
-	// must be initialized after dispatch
-	_libtrace_init();
-
-#if !(TARGET_OS_EMBEDDED || TARGET_OS_SIMULATOR)
-	_libsecinit_initializer();
-#endif
 
 #if TARGET_OS_EMBEDDED
 	_container_init(apple);
 #endif
 
-	__libdarwin_init();
+	//__libdarwin_init();
 
 	__stack_logging_early_finished();
 
@@ -216,8 +199,6 @@ libSystem_atfork_prepare(void)
 
 	// second call hardwired fork prepare handlers for Libsystem components
 	// in the _reverse_ order of library initalization above
-	_libSC_info_fork_prepare();
-	xpc_atfork_prepare();
 	dispatch_atfork_prepare();
 	_malloc_fork_prepare();
 	_pthread_atfork_prepare();
@@ -231,8 +212,6 @@ libSystem_atfork_parent(void)
 	_pthread_atfork_parent();
 	_malloc_fork_parent();
 	dispatch_atfork_parent();
-	xpc_atfork_parent();
-	_libSC_info_fork_parent();
 
 	// second call client parent handlers registered with pthread_atfork()
 	_pthread_atfork_parent_handlers();
@@ -254,10 +233,6 @@ libSystem_atfork_child(void)
 #endif
 	_asl_fork_child();
 	_notify_fork_child();
-	xpc_atfork_child();
-	_libtrace_fork_child();
-	_libSC_info_fork_child();
-
 	// second call client parent handlers registered with pthread_atfork()
 	_pthread_atfork_child_handlers();
 }
