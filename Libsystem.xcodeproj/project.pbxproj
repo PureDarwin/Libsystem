@@ -278,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9B56C55153751A600C153A8 /* Libsystem.xcconfig */;
 			buildSettings = {
+				SYSTEM_HEADER_SEARCH_PATHS = SDK;
 			};
 			name = Release;
 		};
