@@ -1,5 +1,3 @@
-#include "<DEVELOPER_DIR>/Makefiles/CoreOS/Xcode/BSD.xcconfig"
-
 BUILD_VARIANTS = normal debug
 SUPPORTED_PLATFORMS = macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator
 INSTALL_PATH = /usr/lib
