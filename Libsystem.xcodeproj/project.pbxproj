@@ -180,7 +180,7 @@
 		BA5511A9136C9D400012B9B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = BA5511AC136C9D400012B9B5 /* Build configuration list for PBXProject "Libsystem" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -278,6 +278,27 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9B56C55153751A600C153A8 /* Libsystem.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = SDK;
 			};
 			name = Release;
@@ -286,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9B56C55153751A600C153A8 /* Libsystem.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = "$(TARGET_NAME).B";
 				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)";
 			};
@@ -299,6 +321,7 @@
 					normal,
 					debug,
 				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -311,6 +334,7 @@
 					normal,
 					debug,
 				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				INSTALLHDRS_SCRIPT_PHASE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
