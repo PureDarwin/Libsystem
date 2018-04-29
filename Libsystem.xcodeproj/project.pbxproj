@@ -308,6 +308,7 @@
 			baseConfigurationReference = C9B56C55153751A600C153A8 /* Libsystem.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "HAVE_SYSTEM_CORESERVICES=1";
 				PRODUCT_NAME = "$(TARGET_NAME).B";
 				"PRODUCT_NAME[sdk=iphonesimulator*]" = "$(TARGET_NAME)";
 			};
