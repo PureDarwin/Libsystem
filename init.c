@@ -60,7 +60,7 @@ extern void _pthread_clear_qos_tsd(mach_port_t) __attribute__((weak_import));
 extern void _pthread_atfork_prepare(void);
 extern void _pthread_atfork_parent(void);
 extern void _pthread_atfork_child(void);
-extern void _pthread_atfork_prepare_handlers();
+extern void _pthread_atfork_prepare_handlers(void);
 extern void _pthread_atfork_parent_handlers(void);
 extern void _pthread_atfork_child_handlers(void);
 extern void _pthread_exit_if_canceled(int);
