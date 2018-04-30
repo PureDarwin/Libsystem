@@ -48,6 +48,7 @@ extern void __keymgr_initializer(void);		// from libkeymgr.dylib
 extern void _dyld_initializer(void);		// from libdyld.dylib
 extern void libdispatch_init(void);		// from libdispatch.dylib
 //extern void __libdarwin_init(void);		// from libsystem_darwin.dylib
+extern void bootstrap_init(void);		// from libxpc.dylib
 
 
 // signal malloc stack logging that initialisation has finished
@@ -155,6 +156,7 @@ libSystem_initializer(int argc,
 	_dyld_initializer();
 
 	libdispatch_init();
+	bootstrap_init();
 
 #if TARGET_OS_EMBEDDED
 	_container_init(apple);
