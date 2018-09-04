@@ -1,5 +1,6 @@
 # /
 /build
+/darwinbuild.xcconfig
 
 # /Libsystem.xcodeproj/
 /Libsystem.xcodeproj/xcuserdata
