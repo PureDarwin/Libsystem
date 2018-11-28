@@ -48,7 +48,7 @@ extern void __keymgr_initializer(void);		// from libkeymgr.dylib
 extern void _dyld_initializer(void);		// from libdyld.dylib
 extern void libdispatch_init(void);		// from libdispatch.dylib
 //extern void __libdarwin_init(void);		// from libsystem_darwin.dylib
-
+extern void _libxpc_initializer(void);		// from libxpc.dylib
 
 // signal malloc stack logging that initialisation has finished
 extern void __stack_logging_early_finished(void); // form libsystem_c.dylib
@@ -146,6 +146,7 @@ libSystem_initializer(int argc,
 
 	// TODO: Move __malloc_init before __libc_init after breaking malloc's upward link to Libc
 	__malloc_init(apple);
+	_libxpc_initializer();
 
 #if TARGET_OS_OSX
 	/* <rdar://problem/9664631> */
