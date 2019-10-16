@@ -6,6 +6,7 @@ dyld
 launch
 macho
 removefile
+trace
 system_asl
 system_blocks
 system_c
