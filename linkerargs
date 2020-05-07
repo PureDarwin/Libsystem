@@ -1,4 +1,6 @@
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_coreservices.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_kernel.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_malloc.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_pthread.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_platform.dylib
 
@@ -17,7 +19,6 @@
 -Xlinker -reexport-lsystem_c
 -Xlinker -reexport-lsystem_dnssd
 -Xlinker -reexport-lsystem_info
--Xlinker -reexport-lsystem_malloc
 -Xlinker -reexport-lsystem_notify
 -Xlinker -reexport-lunwind
 -Xlinker -reexport-lxpc
