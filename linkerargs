@@ -1,0 +1,23 @@
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_kernel.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_pthread.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_platform.dylib
+
+-L/usr/lib/system
+-Xlinker -reexport-lcommonCrypto
+-Xlinker -reexport-lcompiler_rt
+-Xlinker -reexport-lcopyfile
+-Xlinker -reexport-ldispatch
+-Xlinker -reexport-ldyld
+-Xlinker -reexport-lkeymgr
+-Xlinker -reexport-llaunch
+-Xlinker -reexport-lmacho
+-Xlinker -reexport-lremovefile
+-Xlinker -reexport-lsystem_asl
+-Xlinker -reexport-lsystem_blocks
+-Xlinker -reexport-lsystem_c
+-Xlinker -reexport-lsystem_dnssd
+-Xlinker -reexport-lsystem_info
+-Xlinker -reexport-lsystem_malloc
+-Xlinker -reexport-lsystem_notify
+-Xlinker -reexport-lunwind
+-Xlinker -reexport-lxpc
