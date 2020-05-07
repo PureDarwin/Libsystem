@@ -180,14 +180,15 @@
 		BA5511A9136C9D400012B9B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1140;
 			};
 			buildConfigurationList = BA5511AC136C9D400012B9B5 /* Build configuration list for PBXProject "Libsystem" */;
 			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BA5511A7136C9D400012B9B5;
 			productRefGroup = BA5511C5136C9E2E0012B9B5 /* Products */;
@@ -279,6 +280,7 @@
 			baseConfigurationReference = C9B56C55153751A600C153A8 /* Libsystem.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
