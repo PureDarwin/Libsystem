@@ -1,3 +1,4 @@
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libdispatch.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_coreservices.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_kernel.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_malloc.dylib
@@ -8,7 +9,6 @@
 -Xlinker -reexport-lcommonCrypto
 -Xlinker -reexport-lcompiler_rt
 -Xlinker -reexport-lcopyfile
--Xlinker -reexport-ldispatch
 -Xlinker -reexport-ldyld
 -Xlinker -reexport-lkeymgr
 -Xlinker -reexport-llaunch
