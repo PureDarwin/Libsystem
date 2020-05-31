@@ -1,24 +1,24 @@
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libdispatch.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libdyld.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/liblaunch.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_asl.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_blocks.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_c.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_coreservices.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_info.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_kernel.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_malloc.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_pthread.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_platform.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libunwind.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libxpc.dylib
 
 -L/usr/lib/system
 -Xlinker -reexport-lcommonCrypto
 -Xlinker -reexport-lcompiler_rt
 -Xlinker -reexport-lcopyfile
--Xlinker -reexport-ldyld
 -Xlinker -reexport-lkeymgr
--Xlinker -reexport-llaunch
 -Xlinker -reexport-lmacho
 -Xlinker -reexport-lremovefile
--Xlinker -reexport-lsystem_asl
--Xlinker -reexport-lsystem_blocks
--Xlinker -reexport-lsystem_c
 -Xlinker -reexport-lsystem_dnssd
--Xlinker -reexport-lsystem_info
 -Xlinker -reexport-lsystem_notify
--Xlinker -reexport-lunwind
--Xlinker -reexport-lxpc
