@@ -1,3 +1,4 @@
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libcompiler_rt.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libdispatch.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libdyld.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/liblaunch.dylib
@@ -7,6 +8,7 @@
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_coreservices.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_info.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_kernel.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_m.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_malloc.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_pthread.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libsystem_platform.dylib
@@ -15,7 +17,6 @@
 
 -L/usr/lib/system
 -Xlinker -reexport-lcommonCrypto
--Xlinker -reexport-lcompiler_rt
 -Xlinker -reexport-lcopyfile
 -Xlinker -reexport-lkeymgr
 -Xlinker -reexport-lmacho
