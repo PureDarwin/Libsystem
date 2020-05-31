@@ -1,4 +1,5 @@
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libcompiler_rt.dylib
+-Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libcorecrypto.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libdispatch.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/libdyld.dylib
 -Xlinker -reexport_library -Xlinker ${DEPROOT}/usr/lib/system/liblaunch.dylib
